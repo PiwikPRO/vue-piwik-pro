@@ -21,8 +21,8 @@
     "lint": "eslint --ext .js,.vue,.ts src",
     "format": "prettier --write ."
   },
-  "dependencies": {
-    "vue": "^3.3.11"
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
