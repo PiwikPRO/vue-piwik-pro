@@ -1,4 +1,4 @@
-import { PiwikProWindow } from '../interfaces/piwikpro.window'
+import { PiwikProWindow } from '../interfaces/piwikpro.window.ts'
 
 function init(containerId: string, containerUrl: string, nonce?: string) {
   if (!containerId) {

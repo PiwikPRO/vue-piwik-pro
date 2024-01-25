@@ -1,6 +1,6 @@
 {
   "name": "vue-piwik-pro-example",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -11,8 +11,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "vue": "^3.3.11",
-    "@piwikpro/vue-piwik-pro": "file:.."
+    "@piwikpro/vue-piwik-pro": "file:..",
+    "vue": "^3.3.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",

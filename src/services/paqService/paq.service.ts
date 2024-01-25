@@ -1,4 +1,4 @@
-import { PiwikProWindow } from '../../interfaces/piwikpro.window'
+import { PiwikProWindow } from '../../interfaces/piwikpro.window.ts'
 import { IS_DEBUG } from '../../core'
 
 export function push(collection: any[]) {

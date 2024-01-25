@@ -4,12 +4,19 @@ import typescript from '@rollup/plugin-typescript'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), typescript()],
+  plugins: [
+    vue(),
+    typescript({
+      declaration: true,
+      declarationDir: 'dist',
+      sourceMap: true,
+    }),
+  ],
   build: {
     lib: {
-      entry: 'src/main.ts',
+      entry: './src/index.ts',
       name: 'VuePiwikPro',
-      fileName: 'vue-piwik-pro',
+      fileName: 'index',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

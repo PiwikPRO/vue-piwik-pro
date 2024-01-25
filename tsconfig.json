@@ -21,5 +21,8 @@
     "noFallthroughCasesInSwitch": true,
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", "dist",
+    "vue-piwik-pro-example"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }],
 }

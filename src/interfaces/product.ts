@@ -1,4 +1,4 @@
-import { LimitedArrayFiveStrings } from './utils'
+import { LimitedArrayFiveStrings } from './utils.ts'
 
 export type Product = {
   sku: string
