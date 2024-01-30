@@ -7,6 +7,9 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-essential',
+    'prettier',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended'
   ],
   overrides: [
     {
@@ -32,9 +35,11 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'vue'],
   rules: {
-    indent: ['warning', 'tab'],
+    indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
+    'semi-style': ['error', 'last'],
+    "semi-spacing": ["error", { "before": false, "after": false }]
   },
 }
