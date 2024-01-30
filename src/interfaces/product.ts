@@ -1,6 +1,6 @@
 import { LimitedArrayFiveStrings } from './utils.ts'
 
-type DimensionId = number;
+type DimensionId = number
 
 export type Product = {
   sku: string

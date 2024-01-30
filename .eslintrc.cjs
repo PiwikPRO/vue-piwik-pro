@@ -9,7 +9,7 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'prettier',
     'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   overrides: [
     {
@@ -40,6 +40,6 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
     'semi-style': ['error', 'last'],
-    "semi-spacing": ["error", { "before": false, "after": false }]
+    'semi-spacing': ['error', { before: false, after: false }],
   },
 }
