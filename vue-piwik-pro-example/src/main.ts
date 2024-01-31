@@ -17,4 +17,11 @@ const router = createRouter({
   routes,
 })
 
+import { RouteLocationNormalized } from 'vue-router'
+
+router.beforeEach((to: RouteLocationNormalized) => {
+  // @ts-expect-error-next-line
+  window.document.title = to.meta?.title ?? 'Vue Piwik PRO Example'
+})
+
 createApp(App).use(router).mount('#app')

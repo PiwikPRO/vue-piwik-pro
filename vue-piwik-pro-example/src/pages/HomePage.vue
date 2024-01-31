@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>dupa</div>
+  <div>Home</div>
 </template>
 
 <style scoped></style>
