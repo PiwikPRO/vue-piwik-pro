@@ -11,7 +11,10 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@highlightjs/vue-plugin": "^2.1.0",
     "@piwikpro/vue-piwik-pro": "file:..",
+    "@tailwindcss/typography": "^0.5.10",
+    "highlight.js": "^11.9.0",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },
