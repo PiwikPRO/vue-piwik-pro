@@ -3,6 +3,7 @@ export * as PageViews from './services/pageViews/pageViews.service'
 export * as eCommerce from './services/e-commerce/e-commerce.service'
 export * from './interfaces'
 export * as UserManagement from './services/user-management/userManagement.service'
+export * as CustomEvent from './services/custom-events/customEvents.service'
 
 export default {
   initialize: VuePiwikPro.default.init,
