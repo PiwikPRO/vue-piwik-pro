@@ -4,6 +4,7 @@ export * as eCommerce from './services/e-commerce/e-commerce.service'
 export * from './interfaces'
 export * as UserManagement from './services/user-management/userManagement.service'
 export * as CustomEvent from './services/custom-events/customEvents.service'
+export * as ContentTracking from './services/content-tracking/contentTracking.service'
 
 export default {
   initialize: VuePiwikPro.default.init,
