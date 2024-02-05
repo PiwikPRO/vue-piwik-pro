@@ -29,7 +29,7 @@ router.beforeEach((to: RouteLocationNormalized) => {
 
 const app = createApp(App)
 
-hljs.registerLanguage('javascript', typescript)
+hljs.registerLanguage('typescript', typescript)
 app.use(hljsVuePlugin)
 
 app.use(router).mount('#app')
