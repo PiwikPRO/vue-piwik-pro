@@ -1,12 +1,12 @@
-import { createApp } from 'vue'
 import './style.css'
-import App from './App.vue'
 
+import App from './App.vue'
 import VuePiwikPro from '@piwikpro/vue-piwik-pro'
+import { createApp } from 'vue'
 
 VuePiwikPro.initialize(
-  '0c0a8661-8c10-4f59-b8fc-1c926cbac184',
-  'https://astralprojection.promilci.com',
+  import.meta.env.VITE_PIWIK_PRO_CONTAINER_ID as string,
+  import.meta.env.VITE_PIWIK_PRO_CONTAINER_URL as string
 )
 
 createApp(App).mount('#app')
