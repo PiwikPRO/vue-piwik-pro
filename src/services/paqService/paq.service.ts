@@ -1,5 +1,5 @@
-import { PiwikProWindow } from '../../interfaces/piwikpro.window.ts'
 import { IS_DEBUG } from '../../core'
+import { PiwikProWindow } from '../../interfaces/piwikpro.window.ts'
 
 export function push(collection: any[]) {
   if (!(window as PiwikProWindow)._paq) {
