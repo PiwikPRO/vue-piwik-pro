@@ -55,4 +55,12 @@ export const routes = [
       title: 'Vue Piwik PRO Example - Goal conversions',
     },
   },
+  {
+    path: '/download-and-outlink',
+    name: 'Download and outlink',
+    component: () => import('../pages/DownloadAndOutlinkPage.vue'),
+    meta: {
+      title: 'Vue Piwik PRO Example - Download and outlink',
+    },
+  },
 ]
