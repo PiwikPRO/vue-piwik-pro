@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Product } from '../../../dist/interfaces/product'
 import { products } from '../data/ecommerce'
+import type { Product, PaymentInformation } from '@piwikpro/vue-piwik-pro'
 import { eCommerce } from '@piwikpro/vue-piwik-pro'
-import { PaymentInformation } from '../../../dist/interfaces/payment'
 import Toast from '../components/Toast.vue'
 import Modal from '../components/Modal.vue'
 import ProductDetails from '../components/ProductDetails.vue'
@@ -16,7 +15,7 @@ const showToast = (message: string) => {
   isToastVisible.value = true
 }
 
-const isModalVisible = ref(false)
+const isModalVisible = ref<boolean>(false)
 const chosenProduct = ref<Product | null>(null)
 
 const cart = ref<Product[]>([])

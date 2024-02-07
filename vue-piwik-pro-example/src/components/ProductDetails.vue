@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Product } from '../../../dist/interfaces/product'
+import type { Product } from '@piwikpro/vue-piwik-pro'
 
 const props = defineProps({
   product: {
@@ -19,7 +19,7 @@ const props = defineProps({
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(value, property) in product" :key="property">
+        <tr v-for="(value, property) in props.product" :key="property">
           <th>{{ property }}</th>
           <td>{{ value }}</td>
         </tr>

@@ -1,4 +1,4 @@
-import { Product } from '../../../../dist/interfaces/product'
+import type { Product } from '@piwikpro/vue-piwik-pro'
 
 export const products: Product[] = [
   {
