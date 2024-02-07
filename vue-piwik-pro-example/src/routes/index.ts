@@ -63,4 +63,12 @@ export const routes = [
       title: 'Vue Piwik PRO Example - Download and outlink',
     },
   },
+  {
+    path: '/site-search',
+    name: 'Site search',
+    component: () => import('../pages/SiteSearchPage.vue'),
+    meta: {
+      title: 'Vue Piwik PRO Example - Site search',
+    },
+  },
 ]

@@ -7,6 +7,7 @@ export * as CustomEvent from './services/custom-events/customEvents.service'
 export * as ContentTracking from './services/content-tracking/contentTracking.service'
 export * as GoalConversions from './services/goal-conversions/goal-conversions.service'
 export * as DownloadAndOutlink from './services/download-and-outlink/download-and-outlink.service'
+export * as SiteSearch from './services/site-search/site-search.service'
 
 export default {
   initialize: VuePiwikPro.default.init,
