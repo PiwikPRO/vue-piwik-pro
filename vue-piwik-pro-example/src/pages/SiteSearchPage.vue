@@ -2,6 +2,7 @@
 import { SiteSearch } from '@piwikpro/vue-piwik-pro'
 import Toast from '../components/Toast.vue'
 import { ref } from 'vue'
+import SearchAndList from '../components/SearchAndList.vue'
 
 const pageData = {
   title: 'SiteSearch',
@@ -64,10 +65,11 @@ const showToast = (message: string) => {
         </p>
         <p>
           You can use methods from that collection in page props for example
-          <code>onMounted</code> (methods are invoked when the page starts) or
-          as on example below on the button click using
-          <code>@click</code>event.
+          <code>onMounted</code> (methods are invoked when the page starts), as
+          on example below on the button click using <code>@click</code>event or
+          text input.
         </p>
+        <SearchAndList />
         <div>
           <button
             class="btn"
