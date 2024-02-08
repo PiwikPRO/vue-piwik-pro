@@ -8,6 +8,7 @@ export * as ContentTracking from './services/content-tracking/contentTracking.se
 export * as GoalConversions from './services/goal-conversions/goal-conversions.service'
 export * as DownloadAndOutlink from './services/download-and-outlink/download-and-outlink.service'
 export * as SiteSearch from './services/site-search/site-search.service'
+export * as CustomDimensions from './services/custom-dimensions/customDimensions.service'
 
 export default {
   initialize: VuePiwikPro.default.init,
