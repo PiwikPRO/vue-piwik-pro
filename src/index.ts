@@ -9,6 +9,7 @@ export * as GoalConversions from './services/goal-conversions/goal-conversions.s
 export * as DownloadAndOutlink from './services/download-and-outlink/download-and-outlink.service'
 export * as SiteSearch from './services/site-search/site-search.service'
 export * as CustomDimensions from './services/custom-dimensions/customDimensions.service'
+export * as CookieManagement from './services/cookie-management/cookieManagement.service'
 
 export default {
   initialize: VuePiwikPro.default.init,
