@@ -6,6 +6,10 @@ import App from './App.vue'
 import VuePiwikPro from '@piwikpro/vue-piwik-pro'
 import { createApp } from 'vue'
 import { routes } from './routes'
+import hljsVuePlugin from '@highlightjs/vue-plugin'
+import hljs from 'highlight.js/lib/core'
+import typescript from 'highlight.js/lib/languages/typescript'
+import 'highlight.js/styles/dark.min.css'
 
 VuePiwikPro.initialize(
   import.meta.env.VITE_PIWIK_PRO_CONTAINER_ID as string,
@@ -24,4 +28,9 @@ router.beforeEach((to: RouteLocationNormalized) => {
   window.document.title = to.meta?.title ?? 'Vue Piwik PRO Example'
 })
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+
+hljs.registerLanguage('javascript', typescript)
+app.use(hljsVuePlugin)
+
+app.use(router).mount('#app')

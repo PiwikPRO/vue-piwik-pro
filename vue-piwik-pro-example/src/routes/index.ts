@@ -8,6 +8,14 @@ export const routes = [
     },
   },
   {
+    path: '/page-views',
+    name: 'PageViews',
+    component: () => import('../pages/PageViewsPage.vue'),
+    meta: {
+      title: 'Vue Piwik PRO Example - Page Views',
+    },
+  },
+  {
     path: '/e-commerce',
     name: 'eCommerce',
     component: () => import('../pages/ECommercePage.vue'),
