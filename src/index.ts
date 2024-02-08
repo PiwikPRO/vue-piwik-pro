@@ -5,6 +5,7 @@ export * from './interfaces'
 export * as UserManagement from './services/user-management/userManagement.service'
 export * as CustomEvent from './services/custom-events/customEvents.service'
 export * as ContentTracking from './services/content-tracking/contentTracking.service'
+export * as GoalConversions from './services/goal-conversions/goal-conversions.service'
 
 export default {
   initialize: VuePiwikPro.default.init,
