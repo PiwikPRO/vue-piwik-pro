@@ -47,4 +47,12 @@ export const routes = [
       title: 'Vue Piwik PRO Example - Content tracking',
     },
   },
+  {
+    path: '/goal-conversions',
+    name: 'Goal conversions',
+    component: () => import('../pages/GoalConversionPage.vue'),
+    meta: {
+      title: 'Vue Piwik PRO Example - Goal conversions',
+    },
+  },
 ]
