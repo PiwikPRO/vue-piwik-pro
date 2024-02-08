@@ -23,4 +23,12 @@ export const routes = [
       title: 'Vue Piwik PRO Example - eCommerce',
     },
   },
+  {
+    path: '/user-management',
+    name: 'User management',
+    component: () => import('../pages/UserManagementPage.vue'),
+    meta: {
+      title: 'Vue Piwik PRO Example - User management',
+    },
+  },
 ]

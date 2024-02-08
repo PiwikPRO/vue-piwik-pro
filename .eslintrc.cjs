@@ -41,5 +41,6 @@ module.exports = {
     semi: ['error', 'never'],
     'semi-style': ['error', 'last'],
     'semi-spacing': ['error', { before: false, after: false }],
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 }
