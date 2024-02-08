@@ -31,4 +31,12 @@ export const routes = [
       title: 'Vue Piwik PRO Example - User management',
     },
   },
+  {
+    path: '/custom-events',
+    name: 'Custom events',
+    component: () => import('../pages/CustomEventPage.vue'),
+    meta: {
+      title: 'Vue Piwik PRO Example - Custom events',
+    },
+  },
 ]
