@@ -39,4 +39,12 @@ export const routes = [
       title: 'Vue Piwik PRO Example - Custom events',
     },
   },
+  {
+    path: '/content-tracking',
+    name: 'Content tracking',
+    component: () => import('../pages/ContentTrackingPage.vue'),
+    meta: {
+      title: 'Vue Piwik PRO Example - Content tracking',
+    },
+  },
 ]
