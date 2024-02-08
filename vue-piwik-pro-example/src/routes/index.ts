@@ -71,4 +71,12 @@ export const routes = [
       title: 'Vue Piwik PRO Example - Site search',
     },
   },
+  {
+    path: '/custom-dimensions',
+    name: 'Custom dimensions',
+    component: () => import('../pages/CustomDimensionsPage.vue'),
+    meta: {
+      title: 'Vue Piwik PRO Example - Custom dimensions',
+    },
+  },
 ]
