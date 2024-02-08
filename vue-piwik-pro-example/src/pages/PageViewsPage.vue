@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { PageViews } from '@piwikpro/vue-piwik-pro'
+import Toast from '../components/Toast.vue'
+import { ref } from 'vue'
+
 const pageData = {
   title: 'PageViews',
   heading: 'Send page views and virtual page views',
@@ -7,11 +11,18 @@ const pageData = {
   methods: [
     {
       method: 'trackEvent',
-      usage:
-        'PageViews.trackEvent(category: string, action: string, name?: string | undefined, value?: number | undefined): void',
-      desc: 'Tracks manual content impression event.',
+      usage: 'PageViews.trackPageView(customPageTitle?: string): void',
+      desc: 'Tracks page view of the page that the function was run on.',
     },
   ],
+}
+
+const toastMessage = ref('')
+const isToastVisible = ref(false)
+
+const showToast = (message: string) => {
+  toastMessage.value = message
+  isToastVisible.value = true
 }
 </script>
 
@@ -40,8 +51,21 @@ const pageData = {
         button click using <code>@click</code>
         prop.
       </p>
+      <button
+        class="btn"
+        @click="
+          () => {
+            PageViews.trackPageView('optional title from button')
+            showToast('PageViews.trackPageView(\'optional title from button\')')
+          }
+        "
+      >
+        PageViews.trackPageView
+      </button>
     </div>
   </div>
+
+  <Toast :message="toastMessage" v-model="isToastVisible" />
 </template>
 
 <style scoped></style>
