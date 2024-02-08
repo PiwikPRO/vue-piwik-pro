@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import { GoalConversions } from '@piwikpro/vue-piwik-pro'
+import Toast from '../components/Toast.vue'
+import { ref } from 'vue'
+
 const pageData = {
   title: 'GoalConversions',
   heading: 'Goal Conversions',
@@ -12,6 +16,14 @@ const pageData = {
       desc: 'Tracks manual goal conversion.',
     },
   ],
+}
+
+const toastMessage = ref('')
+const isToastVisible = ref(false)
+
+const showToast = (message: string) => {
+  toastMessage.value = message
+  isToastVisible.value = true
 }
 </script>
 
@@ -48,10 +60,19 @@ const pageData = {
           <code>onMounted</code> (methods are invoked when the page starts) or
           on the button click using <code>@click</code> prop.
         </p>
-        <div>
-          <GoalConvetionsButton />
-        </div>
       </article>
+      <button
+        class="btn"
+        @click="
+          () => {
+            GoalConversions.trackGoal(2, 40)
+            showToast('GoalConversions.trackGoal(2, 40)')
+          }
+        "
+      >
+        GoalConversions.trackGoal
+      </button>
     </div>
   </div>
+  <Toast :message="toastMessage" v-model="isToastVisible" />
 </template>
