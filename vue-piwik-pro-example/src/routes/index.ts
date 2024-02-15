@@ -79,4 +79,12 @@ export const routes = [
       title: 'Vue Piwik PRO Example - Custom dimensions',
     },
   },
+  {
+    path: '/cookie-management',
+    name: 'Cookie management',
+    component: () => import('../pages/CookieManagementPage.vue'),
+    meta: {
+      title: 'Vue Piwik PRO Example - Cookie management',
+    },
+  },
 ]

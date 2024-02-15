@@ -51,6 +51,7 @@ export enum TRACK_EVENT {
   SET_VISITOR_COOKIE_TIMEOUT = 'setVisitorCookieTimeout',
   SET_SESSION_COOKIE_TIMEOUT = 'setSessionCookieTimeout',
   SET_VISITOR_ID_COOKIE = 'setVisitorIdCookie',
+  SET_REFERRAL_COOKIE_TIMEOUT = 'setReferralCookieTimeout',
   SET_DOCUMENT_TITLE = 'setDocumentTitle',
   SET_DOMAINS = 'setDomains',
   SET_CUSTOM_URL = 'setCustomUrl',
