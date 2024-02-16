@@ -17,7 +17,23 @@ function init(containerId: string, containerUrl: string, nonce?: string) {
     )
   }
 
-  const s: HTMLScriptElement = document.createElement('script')
+  if (!document || typeof document.createElement !== 'function') {
+    console.error(
+      'Was not possible to access Document interface. Make sure this module is running on a Browser w/ access do Document interface.'
+    )
+    return
+  }
+  
+  let s: HTMLScriptElement
+  try {
+    s = document.createElement('script')
+  } catch (error) {
+    console.error(
+      'Was not possible to access Document interface. Make sure this module is running on a Browser w/ access do Document interface.'
+    )
+    return
+  }
+
   s.async = true
   if (nonce) {
     s.setAttribute('nonce', nonce)
@@ -37,7 +53,7 @@ tags.async=!0,tags.src="${containerUrl}/"+id+".js"+qPString,scripts.parentNode.i
 
 export const IS_DEBUG =
   (typeof process !== 'undefined' &&
-    import.meta.env.NODE_ENV === 'development') ||
+    process.env.NODE_ENV === 'development') ||
   (typeof window !== 'undefined' && (window as PiwikProWindow).IS_DEBUG) ||
   false
 
