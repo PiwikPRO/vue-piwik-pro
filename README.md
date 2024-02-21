@@ -1,18 +1,55 @@
-# Vue 3 + TypeScript + Vite
+# Piwik PRO Library for VUE
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Dedicated Piwik PRO library that helps with implementing Piwik PRO Tag Manager and the Piwik PRO tracking client in VUE applications.
 
-## Recommended IDE Setup
+* [Installation](#installation)
+  * [NPM](#npm)
+  * [Basic setup](#basic-setup)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Installation
 
-## Type Support For `.vue` Imports in TS
+### NPM
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+To use this package in your project, run the following command.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+```
+npm install @piwikpro/vue-piwik-pro
+```
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
+### Basic setup
+
+In your Vue Project, include the default `PiwikPro` in the highest level application module. ie `main`. To set up the Piwik PRO Tag Manager container in the app, the easiest way is to call the `PiwikPro.initialize()` method. `PiwikPro.initialize()` must be initialized using this function before any of the other tracking functions will record any data.
+
+In the arguments, pass your app ID and your account URL as parameters (marked 'container-id' and 'container-url' in the example below).
+
+```ts
+// main.ts
+import VuePiwikPro from '@piwikpro/vue-piwik-pro'
+
+VuePiwikPro.initialize(
+  import.meta.env.VITE_PIWIK_PRO_CONTAINER_ID as string,
+  import.meta.env.VITE_PIWIK_PRO_CONTAINER_URL as string
+)
+```
+
+### Setup with nonce
+
+The nonce attribute is useful to allow-list specific elements, such as a particular inline script or style elements. It can help you to avoid using the CSP unsafe-inline directive, which would allow-list all inline scripts or styles.
+
+If you want your nonce to be passed to the script, pass it as the third argument when calling the script initialization method.
+
+```ts
+// main.ts
+import VuePiwikPro from '@piwikpro/vue-piwik-pro'
+
+VuePiwikPro.initialize(
+  import.meta.env.VITE_PIWIK_PRO_CONTAINER_ID as string,
+  import.meta.env.VITE_PIWIK_PRO_CONTAINER_URL as string,
+  'nonce-string'
+)
+```
+
+## Examples of usage
+
+Please explore the ```./vue-piwik-pro-example``` directory to get to know how to use this package with a specyfic examples and it's various methods.
