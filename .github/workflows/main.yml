@@ -64,7 +64,7 @@ jobs:
             id: get_version
             run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
           - name: Download a Build Artifact
-            uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a
+            uses: actions/download-artifact@87c55149d96e628cc2ef7e6fc2aab372015aec85
             with:
               name: piwikpro-vue-piwik-pro-${{ steps.get_version.outputs.VERSION }}
           - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
