@@ -54,7 +54,7 @@ jobs:
       - name: 'Upload Build Artifatc ${{ steps.get_version.outputs.VERSION }}'
         uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3
         with:
-          name: ${{ steps.get_version.outputs.VERSION }}.tgz
+          name: piwikpro-vue-piwik-pro-${{ steps.get_version.outputs.VERSION }}
           path: piwikpro-vue-piwik-pro-${{ steps.get_version.outputs.VERSION }}.tgz
    publish-npm:
       needs: bump-and-build
@@ -66,7 +66,7 @@ jobs:
           - name: Download a Build Artifact
             uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a
             with:
-              name: piwikpro-vue-piwik-pro-${{ steps.get_version.outputs.VERSION }}.tgz
+              name: piwikpro-vue-piwik-pro-${{ steps.get_version.outputs.VERSION }}
           - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
             with:
               node-version: 18
