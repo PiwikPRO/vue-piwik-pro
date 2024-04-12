@@ -1,76 +1,29 @@
-name: Bump and Publish
+name: Publish
 
 on:
   release:
     types: [released]
-    # refs/tags/x.x.x
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
 
 jobs:
-   tests:
-     runs-on: ubuntu-latest
-     steps:
-       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-       - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
-         with:
-           node-version: 18
-       - name: 'Cache node Modules'
-         uses: actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2
-         with:
-           path: ~.npm
-           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-           restore-keys: |
-             ${{ runner.os }}-node-
-       - run: npm i
-       - run: npm run test
-   bump-and-build:
-    needs: tests
+  publish:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
+
     steps:
-      - name: Get the version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
+
+      - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
         with:
-          node-version: 18
-          registry-url: https://registry.npmjs.org/
-      - name: 'Cache node Modules'
-        uses: actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2
-        with:
-          path: ~.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - run: npm i
-      - run: npm --no-git-tag-version --allow-same-version version ${{ steps.get_version.outputs.VERSION }}
-      - run: npm run build
-      - run: npm pack
-      - name: 'Upload Build Artifatc ${{ steps.get_version.outputs.VERSION }}'
-        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3
-        with:
-          name: piwikpro-vue-piwik-pro-${{ steps.get_version.outputs.VERSION }}
-          path: piwikpro-vue-piwik-pro-${{ steps.get_version.outputs.VERSION }}.tgz
-   publish-npm:
-      needs: bump-and-build
-      runs-on: ubuntu-latest
-      steps:
-          - name: Get the version
-            id: get_version
-            run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-          - name: Download a Build Artifact
-            uses: actions/download-artifact@87c55149d96e628cc2ef7e6fc2aab372015aec85
-            with:
-              name: piwikpro-vue-piwik-pro-${{ steps.get_version.outputs.VERSION }}
-          - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8
-            with:
-              node-version: 18
-              registry-url: https://registry.npmjs.org/
-          - run: npm publish piwikpro-vue-piwik-pro-${{ steps.get_version.outputs.VERSION }}.tgz
-            env:
-              NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install modules
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
