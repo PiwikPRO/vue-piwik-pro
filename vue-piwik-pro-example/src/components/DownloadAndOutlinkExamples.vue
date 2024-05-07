@@ -11,7 +11,7 @@ const showToast = (message: string) => {
   isToastVisible.value = true
 }
 
-const linkTrackingTimer = ref<string>('')
+const linkTrackingTimer = ref<string | number>('')
 
 const callAsyncMethods = async () => {
   // function trackLink(url: string, linkType: string, customData?: object | undefined, callback?: ((params: any) => void) | undefined): void

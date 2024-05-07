@@ -1,3 +1,4 @@
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   env: {
     browser: true,
@@ -11,6 +12,7 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended',
   ],
+  ignorePatterns: ['dist'],
   overrides: [
     {
       env: {
