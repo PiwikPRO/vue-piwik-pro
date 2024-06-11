@@ -14,6 +14,9 @@ const formattedOutput = file
   .filter((line) => !line.includes('### Functions'))
   // remove remove additional prefix
   .map((line) => line.replace('Namespace: ', ''))
+  .map((line) =>
+    line.replace('## Piwik PRO Library for VUE', '# Piwik PRO Library for VUE')
+  )
   .join('\n')
 
 writeFileSync(README, formattedOutput)

@@ -41,19 +41,20 @@ import VuePiwikPro from '@piwikpro/vue-piwik-pro'
 VuePiwikPro.initialize(
   import.meta.env.VITE_PIWIK_PRO_CONTAINER_ID as string,
   import.meta.env.VITE_PIWIK_PRO_CONTAINER_URL as string,
-  'nonce-string'
+  { nonce: 'nonce-string' }
 )
 ```
 
 ### Basic usage
+
 ```ts
-import { PageViews, GoalConversions } from "@piwikpro/vue-piwik-pro"
+import { PageViews, GoalConversions } from '@piwikpro/vue-piwik-pro'
 
-PageViews.trackPageView();
+PageViews.trackPageView()
 
-GoalConversions.trackGoal(1, 100);
+GoalConversions.trackGoal(1, 100)
 ```
 
 ## Examples of usage
 
-Please explore the ```./vue-piwik-pro-example``` directory to get to know how to use this package with a specific examples and it's various methods.
+Please explore the `./vue-piwik-pro-example` directory to get to know how to use this package with a specific examples and it's various methods.
