@@ -1,7 +1,7 @@
 {
   "name": "@piwikpro/vue-piwik-pro",
   "private": false,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "author": "Piwik Pro Integration Team <integrations@piwik.pro>",
   "license": "MIT",
@@ -25,7 +25,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "build:docs": "typedoc && concat-md docs_raw > README.md && node scripts/postProcessDocs.js",
+    "build:docs": "typedoc && concat-md --decrease-title-levels --start-title-level-at=2 docs_raw > README.md && node scripts/postProcessDocs.js",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.vue,.ts src",
     "format": "prettier --write .",
@@ -72,6 +72,6 @@
     "plugin"
   ],
   "dependencies": {
-    "@piwikpro/tracking-base-library": "^1.1.2"
+    "@piwikpro/tracking-base-library": "^1.2.0"
   }
 }
