@@ -1,7 +1,7 @@
 {
   "name": "@piwikpro/vue-piwik-pro",
   "private": false,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
   "author": "Piwik Pro Integration Team <integrations@piwik.pro>",
   "license": "MIT",
@@ -39,7 +39,7 @@
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-typescript": "^7.23.3",
-    "@happy-dom/jest-environment": "^13.3.8",
+    "@happy-dom/jest-environment": "^15.11.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.5",
@@ -63,7 +63,7 @@
     "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
-    "vue-tsc": "^1.8.25"
+    "vue-tsc": "^2.1.10"
   },
   "keywords": [
     "vue",
@@ -72,6 +72,6 @@
     "plugin"
   ],
   "dependencies": {
-    "@piwikpro/tracking-base-library": "^1.2.0"
+    "@piwikpro/tracking-base-library": "^1.2.2"
   }
 }
