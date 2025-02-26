@@ -65,7 +65,7 @@ const showToast = (message: string) => {
         class="btn"
         @click="
           () => {
-            GoalConversions.trackGoal(2, 40)
+            GoalConversions.trackGoal(2, 40, undefined, { currencyCode: 'USD' })
             showToast('GoalConversions.trackGoal(2, 40)')
           }
         "
