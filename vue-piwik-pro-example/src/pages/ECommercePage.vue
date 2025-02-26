@@ -21,12 +21,15 @@ const chosenProduct = ref<Product | null>(null)
 const cart = ref<Product[]>([])
 
 const handlelAddToCart = (product: Product) => {
-  eCommerce.ecommerceAddToCart([
-    {
-      ...product,
-      quantity: 1,
-    },
-  ])
+  eCommerce.ecommerceAddToCart(
+    [
+      {
+        ...product,
+        quantity: 1,
+      },
+    ],
+    { currencyCode: 'USD' }
+  )
 
   showToast('eCommerce.ecommerceAddToCart()')
 
@@ -55,12 +58,15 @@ const handlelAddToCart = (product: Product) => {
 const handleRemoveFromCart = (product: Product) => {
   showToast('eCommerce.ecommerceRemoveFromCart()')
 
-  eCommerce.ecommerceRemoveFromCart([
-    {
-      ...product,
-      quantity: 1,
-    },
-  ])
+  eCommerce.ecommerceRemoveFromCart(
+    [
+      {
+        ...product,
+        quantity: 1,
+      },
+    ],
+    { currencyCode: 'USD' }
+  )
   cart.value = cart.value.filter((item) => item.sku !== product.sku)
 }
 
@@ -91,13 +97,15 @@ const handleCheckout = () => {
   }
 
   showToast('eCommerce.ecommerceOrder()')
-  eCommerce.ecommerceOrder(cart.value, paymentInformation)
+  eCommerce.ecommerceOrder(cart.value, paymentInformation, {
+    currencyCode: 'USD',
+  })
 }
 
 const handleShowProductDetails = (product: Product) => {
   isModalVisible.value = true
   chosenProduct.value = product
-  eCommerce.ecommerceProductDetailView([product])
+  eCommerce.ecommerceProductDetailView([product], { currencyCode: 'USD' })
   showToast('eCommerce.ecommerceProductDetailView()')
 }
 </script>
