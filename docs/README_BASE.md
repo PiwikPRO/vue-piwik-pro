@@ -58,4 +58,3 @@ GoalConversions.trackGoal(1, 100)
 ## Examples of usage
 
 Please explore the `./vue-piwik-pro-example` directory to get to know how to use this package with a specific examples and it's various methods.
-test
