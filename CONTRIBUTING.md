@@ -67,4 +67,4 @@ When you're sending a pull request:
 - Follow the pull request template when opening a pull request.
 - For pull requests that change the API or implementation, discuss with maintainers first by opening an issue.
 
-After opening a pull request our CI will verify that the formatting is correct, tests are passing, documentation is up to date.
+After opening a pull request our CI will verify that the formatting is correct, tests are passing and documentation is up to date.
