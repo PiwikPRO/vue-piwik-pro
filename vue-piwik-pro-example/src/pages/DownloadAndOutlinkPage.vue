@@ -29,6 +29,21 @@ const pageData = {
       desc: 'Sets a list of class names that indicate whether a list is a download and not an outlink.',
     },
     {
+      method: 'addDownloadClasses',
+      usage: 'DownloadAndOutlink.addDownloadClasses(classes: string[])',
+      desc: 'Adds new classes to the download classes list.',
+    },
+    {
+      method: 'removeDownloadClasses',
+      usage: 'DownloadAndOutlink.removeDownloadClasses(classes: string[])',
+      desc: 'Removes classes from the download classes list.',
+    },
+    {
+      method: 'getDownloadClasses',
+      usage: 'DownloadAndOutlink.getDownloadClasses()',
+      desc: 'Returns the list of download classes (CSS classes that indicate a link is a download).',
+    },
+    {
       method: 'setDownloadExtensions',
       usage: 'DownloadAndOutlink.setDownloadExtensions(extensions: string[])',
       desc: 'Overwrites the list of file extensions indicating that a link is a download.',
