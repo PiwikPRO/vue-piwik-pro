@@ -1080,9 +1080,12 @@ Adds entry to a data layer
 ## DownloadAndOutlink
 
 
+- [addDownloadClasses](#namespacesdownloadandoutlinkfunctionsadddownloadclassesmd)
 - [addDownloadExtensions](#namespacesdownloadandoutlinkfunctionsadddownloadextensionsmd)
 - [enableLinkTracking](#namespacesdownloadandoutlinkfunctionsenablelinktrackingmd)
+- [getDownloadClasses](#namespacesdownloadandoutlinkfunctionsgetdownloadclassesmd)
 - [getLinkTrackingTimer](#namespacesdownloadandoutlinkfunctionsgetlinktrackingtimermd)
+- [removeDownloadClasses](#namespacesdownloadandoutlinkfunctionsremovedownloadclassesmd)
 - [removeDownloadExtensions](#namespacesdownloadandoutlinkfunctionsremovedownloadextensionsmd)
 - [setDownloadClasses](#namespacesdownloadandoutlinkfunctionssetdownloadclassesmd)
 - [setDownloadExtensions](#namespacesdownloadandoutlinkfunctionssetdownloadextensionsmd)
@@ -1090,6 +1093,29 @@ Adds entry to a data layer
 - [setLinkClasses](#namespacesdownloadandoutlinkfunctionssetlinkclassesmd)
 - [setLinkTrackingTimer](#namespacesdownloadandoutlinkfunctionssetlinktrackingtimermd)
 - [trackLink](#namespacesdownloadandoutlinkfunctionstracklinkmd)
+
+
+<a name="namespacesdownloadandoutlinkfunctionsadddownloadclassesmd"></a>
+
+
+***
+
+
+## addDownloadClasses()
+
+> **addDownloadClasses**(`classes`): `void`
+
+Adds new classes to the download classes list
+
+### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `classes` | `string`[] |
+
+### Returns
+
+`void`
 
 
 <a name="namespacesdownloadandoutlinkfunctionsadddownloadextensionsmd"></a>
@@ -1141,6 +1167,23 @@ to a downloadable file creates a download event
 `void`
 
 
+<a name="namespacesdownloadandoutlinkfunctionsgetdownloadclassesmd"></a>
+
+
+***
+
+
+## getDownloadClasses()
+
+> **getDownloadClasses**(): `Promise`\<`string`[]\>
+
+Returns list of download classes (CSS classes that indicate a link is a download)
+
+### Returns
+
+`Promise`\<`string`[]\>
+
+
 <a name="namespacesdownloadandoutlinkfunctionsgetlinktrackingtimermd"></a>
 
 
@@ -1156,6 +1199,29 @@ Returns lock/wait time after a request set by setLinkTrackingTimer
 ### Returns
 
 `Promise`\<`number`\>
+
+
+<a name="namespacesdownloadandoutlinkfunctionsremovedownloadclassesmd"></a>
+
+
+***
+
+
+## removeDownloadClasses()
+
+> **removeDownloadClasses**(`classes`): `void`
+
+Removes classes from the download classes list
+
+### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `classes` | `string`[] |
+
+### Returns
+
+`void`
 
 
 <a name="namespacesdownloadandoutlinkfunctionsremovedownloadextensionsmd"></a>
