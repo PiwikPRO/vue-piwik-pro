@@ -180,6 +180,41 @@ onMounted(() => {
       >
         CustomDimensions.getCustomDimensionValue
       </button>
+      <button
+        class="btn mr-5 mt-5"
+        @click="
+          async () => {
+            await DownloadAndOutlink.setDownloadClasses(['test-class'])
+            showToast('DownloadAndOutlink.setDownloadClasses([\'test-class\'])')
+          }
+        "
+      >
+        DownloadAndOutlink.setDownloadClasses
+      </button>
+      <button
+        class="btn mr-5 mt-5"
+        @click="
+          async () => {
+            await DownloadAndOutlink.addDownloadClasses(['test-class'])
+            showToast('DownloadAndOutlink.addDownloadClasses([\'test-class\'])')
+          }
+        "
+      >
+        DownloadAndOutlink.addDownloadClasses
+      </button>
+      <button
+        class="btn mr-5 mt-5"
+        @click="
+          async () => {
+            await DownloadAndOutlink.removeDownloadClasses(['test-class'])
+            showToast(
+              'DownloadAndOutlink.removeDownloadClasses([\'test-class\'])'
+            )
+          }
+        "
+      >
+        DownloadAndOutlink.removeDownloadClasses
+      </button>
     </div>
     <h2>Example download</h2>
     <div>
@@ -192,6 +227,9 @@ onMounted(() => {
       <br />
       <a class="do-not-track" href="/files/example.xlsx"> Download XLSX </a> -
       download turned off by default using className
+      <br />
+      <a class="test-class" href="/files/example.7z">Download 7Z</a> - download
+      or outlink, depending on if the class is in download classes or not
     </div>
   </div>
   <Toast :message="toastMessage" v-model="isToastVisible" />
