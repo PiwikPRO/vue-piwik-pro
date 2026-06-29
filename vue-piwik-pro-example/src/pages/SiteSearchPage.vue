@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { SiteSearch } from '@piwikpro/vue-piwik-pro'
-import Toast from '../components/Toast.vue'
-import { ref } from 'vue'
+import { useToast } from '../composables/useToast'
 import SearchAndList from '../components/SearchAndList.vue'
 
 const pageData = {
@@ -19,13 +18,7 @@ const pageData = {
   ],
 }
 
-const toastMessage = ref('')
-const isToastVisible = ref(false)
-
-const showToast = (message: string) => {
-  toastMessage.value = message
-  isToastVisible.value = true
-}
+const { add: showToast } = useToast()
 </script>
 
 <template>
@@ -38,17 +31,16 @@ const showToast = (message: string) => {
         </div>
         <h2>Import</h2>
         <div>
-          <highlightjs
-            language="typescript"
-            code="import { SiteSearch } from '@piwikpro/vue-piwik-pro'"
-          />
+          <code class="language-ts"
+            >import { SiteSearch } from '@piwikpro/vue-piwik-pro'</code
+          >
         </div>
         <h2>Methods</h2>
         <ul>
           <li v-for="method in pageData.methods" :key="method.method">
             <h4>{{ method.method }}</h4>
             <p>{{ method.desc }}</p>
-            <highlightjs language="typescript" :code="method.usage" />
+            <code class="language-ts">{{ method.usage }}</code>
           </li>
         </ul>
       </article>
@@ -88,5 +80,4 @@ const showToast = (message: string) => {
       </article>
     </div>
   </div>
-  <Toast v-model="isToastVisible" :message="toastMessage" />
 </template>

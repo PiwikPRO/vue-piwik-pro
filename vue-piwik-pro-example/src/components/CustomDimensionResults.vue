@@ -1,17 +1,11 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
 import { CustomDimensions } from '@piwikpro/vue-piwik-pro'
-import Toast from './Toast.vue'
+import { useToast } from '../composables/useToast'
 
 const customDimValue = ref<string>('')
 
-const toastMessage = ref('')
-const isToastVisible = ref(false)
-
-const showToast = (message: string) => {
-  toastMessage.value = message
-  isToastVisible.value = true
-}
+const { add: showToast } = useToast()
 
 const callAsyncMethods = async () => {
   // function setCustomDimensionValue(customDimensionId: string | number, customDimensionValue: string): void
@@ -87,5 +81,4 @@ onMounted(() => {
       </button>
     </div>
   </div>
-  <Toast :message="toastMessage" v-model="isToastVisible" />
 </template>

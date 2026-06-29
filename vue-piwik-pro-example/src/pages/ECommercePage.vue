@@ -3,17 +3,11 @@ import { ref } from 'vue'
 import { products } from '../data/ecommerce'
 import type { Product, PaymentInformation } from '@piwikpro/vue-piwik-pro'
 import { eCommerce } from '@piwikpro/vue-piwik-pro'
-import Toast from '../components/Toast.vue'
 import Modal from '../components/Modal.vue'
 import ProductDetails from '../components/ProductDetails.vue'
+import { useToast } from '../composables/useToast'
 
-const toastMessage = ref('')
-const isToastVisible = ref(false)
-
-const showToast = (message: string) => {
-  toastMessage.value = message
-  isToastVisible.value = true
-}
+const { add: showToast } = useToast()
 
 const isModalVisible = ref<boolean>(false)
 const chosenProduct = ref<Product | null>(null)
@@ -192,7 +186,6 @@ const handleShowProductDetails = (product: Product) => {
   <Modal name="product-details" v-model="isModalVisible">
     <ProductDetails v-if="chosenProduct" :product="chosenProduct" />
   </Modal>
-  <Toast :message="toastMessage" v-model="isToastVisible" />
 </template>
 
 <style scoped></style>
