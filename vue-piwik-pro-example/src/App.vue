@@ -1,46 +1,14 @@
 <script setup lang="ts">
-import { routes } from './routes'
+import NavigationMenuDrawer from './components/NavigationMenuDrawer.vue'
+import ToastStack from './components/ToastStack.vue'
 </script>
 
 <template>
-  <div class="navbar bg-base-100">
-    <div class="navbar-start">
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h7"
-            />
-          </svg>
-        </div>
-        <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-        >
-          <li v-for="route in routes" :key="route.name">
-            <router-link :to="route.path">{{ route.name }}</router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="navbar-center">
-      <router-link class="btn btn-ghost text-xl" to="/"
-        >Vue Piwik PRO</router-link
-      >
-    </div>
-  </div>
-  <div class="container mx-auto">
+  <NavigationMenuDrawer />
+  <main class="main-content">
     <router-view />
-  </div>
+  </main>
+  <ToastStack />
 </template>
 
 <style scoped></style>

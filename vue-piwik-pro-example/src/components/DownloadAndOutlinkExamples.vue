@@ -1,15 +1,9 @@
 <script lang="ts" setup>
-import Toast from './Toast.vue'
 import { DownloadAndOutlink } from '@piwikpro/vue-piwik-pro'
 import { onMounted, ref } from 'vue'
+import { useToast } from '../composables/useToast'
 
-const toastMessage = ref('')
-const isToastVisible = ref(false)
-
-const showToast = (message: string) => {
-  toastMessage.value = message
-  isToastVisible.value = true
-}
+const { add: showToast } = useToast()
 
 const linkTrackingTimer = ref<string | number>('')
 
@@ -232,5 +226,4 @@ onMounted(() => {
       or outlink, depending on if the class is in download classes or not
     </div>
   </div>
-  <Toast :message="toastMessage" v-model="isToastVisible" />
 </template>
