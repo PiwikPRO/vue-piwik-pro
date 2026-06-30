@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import Navigation from './Navigation.vue'
+import NavigationLinks from './NavigationLinks.vue'
 
 const isOpen = ref(false)
 const route = useRoute()
@@ -48,7 +48,7 @@ watch(
           >
             &times;
           </button>
-          <Navigation />
+          <NavigationLinks />
         </aside>
       </Transition>
     </Teleport>

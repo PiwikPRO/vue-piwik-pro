@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { products } from '../data/ecommerce'
 import type { Product, PaymentInformation } from '@piwikpro/vue-piwik-pro'
 import { eCommerce } from '@piwikpro/vue-piwik-pro'
-import Modal from '../components/Modal.vue'
+import ModalDialog from '../components/ModalDialog.vue'
 import ProductDetails from '../components/ProductDetails.vue'
 import { useToast } from '../composables/useToast'
 
@@ -183,9 +183,9 @@ const handleShowProductDetails = (product: Product) => {
     </div>
   </div>
 
-  <Modal name="product-details" v-model="isModalVisible">
+  <ModalDialog name="product-details" v-model="isModalVisible">
     <ProductDetails v-if="chosenProduct" :product="chosenProduct" />
-  </Modal>
+  </ModalDialog>
 </template>
 
 <style scoped></style>

@@ -8,5 +8,5 @@ const pkg = JSON.parse(
 
 writeFileSync(
   new URL('../src/version.ts', import.meta.url),
-  `export const VERSION = ${JSON.stringify(pkg.version)}\n`
+  `export const VERSION = '${pkg.version}'\n`
 )
