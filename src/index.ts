@@ -1,11 +1,11 @@
 import * as PiwikPRO from '@piwikpro/tracking-base-library'
 export * from '@piwikpro/tracking-base-library'
-import { version } from '../package.json'
+import { VERSION } from './version'
 import { Initialize, Miscellaneous } from '@piwikpro/tracking-base-library'
 
 const initialize: Initialize = (...args) => {
   if (typeof window !== 'undefined') {
-    Miscellaneous.setTrackingSourceProvider('vue', version)
+    Miscellaneous.setTrackingSourceProvider('vue', VERSION)
   }
 
   PiwikPRO.default.initialize(...args)
