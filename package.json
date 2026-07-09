@@ -72,6 +72,6 @@
     "plugin"
   ],
   "dependencies": {
-    "@piwikpro/tracking-base-library": "^1.7.0"
+    "@piwikpro/tracking-base-library": "^1.7.1"
   }
 }
