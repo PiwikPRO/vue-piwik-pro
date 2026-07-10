@@ -24,7 +24,6 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "changelog": "auto-changelog",
     "version": "node scripts/bakeInVersion.js && auto-changelog -p && git add CHANGELOG.md src/version.ts",
     "build": "node scripts/bakeInVersion.js && vue-tsc && vite build",
     "build:docs": "typedoc && concat-md --decrease-title-levels --start-title-level-at=2 docs_raw > README.md && node scripts/postProcessDocs.js",

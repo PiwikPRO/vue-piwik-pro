@@ -3,5 +3,6 @@
   "template": "keepachangelog",
   "unreleased": false,
   "commitLimit": false,
-  "hideCredit": true
+  "hideCredit": true,
+  "ignoreCommitPattern": "^chore\\(release\\)"
 }

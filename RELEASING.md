@@ -28,11 +28,11 @@ the changelog depends on clear PR titles.
 
 The changelog lists **released versions only** — there is no persistent
 "Unreleased" section, since it would go stale between releases. The entry for a
-new version is produced automatically as part of the release (see below). To
+new version is produced automatically as part of the release (see below), by the
+`version` npm lifecycle hook — you never generate the changelog by hand. To
 preview what will be in the next release at any time, use the GitHub compare
-view (`<last-tag>...HEAD`), or run `npx auto-changelog --unreleased --stdout`.
-(`npm run changelog` only regenerates the released history — it does not show
-pending changes.)
+view (`<last-tag>...HEAD`), or run `npx auto-changelog --unreleased --stdout`
+(read-only, prints to the terminal without touching the file).
 
 ## Release steps
 
