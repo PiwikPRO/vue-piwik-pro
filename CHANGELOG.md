@@ -5,6 +5,39 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.1](https://github.com/PiwikPRO/vue-piwik-pro/compare/1.7.0...1.7.1)
+
+### Merged
+
+- ci: added pr title lint [`#65`](https://github.com/PiwikPRO/vue-piwik-pro/pull/65)
+- chore(changelog): filter release commits and lock down generation [`#64`](https://github.com/PiwikPRO/vue-piwik-pro/pull/64)
+- chore: added Changelog [`#62`](https://github.com/PiwikPRO/vue-piwik-pro/pull/62)
+- chore: bump tracking-base-library from 1.7.0 to 1.7.1 [`#61`](https://github.com/PiwikPRO/vue-piwik-pro/pull/61)
+- Bump typedoc and update Readme [`#60`](https://github.com/PiwikPRO/vue-piwik-pro/pull/60)
+- Bump eslint and @typescript-eslint packages [`#59`](https://github.com/PiwikPRO/vue-piwik-pro/pull/59)
+- Update package-lock in example [`#58`](https://github.com/PiwikPRO/vue-piwik-pro/pull/58)
+- Bump minimatch from 3.1.2 to 3.1.5 [`#57`](https://github.com/PiwikPRO/vue-piwik-pro/pull/57)
+- Bump vite and @vitejs/plugin-vue [`#45`](https://github.com/PiwikPRO/vue-piwik-pro/pull/45)
+- Added bake in version script [`#56`](https://github.com/PiwikPRO/vue-piwik-pro/pull/56)
+- Bump vite and vue-tsc in /vue-piwik-pro-example [`#55`](https://github.com/PiwikPRO/vue-piwik-pro/pull/55)
+- Bump rollup from 4.26.0 to 4.62.2 [`#54`](https://github.com/PiwikPRO/vue-piwik-pro/pull/54)
+- Bump @babel/plugin-transform-modules-systemjs from 7.23.9 to 7.29.7 [`#44`](https://github.com/PiwikPRO/vue-piwik-pro/pull/44)
+- Bump flatted from 3.2.9 to 3.4.2 [`#53`](https://github.com/PiwikPRO/vue-piwik-pro/pull/53)
+- Remove ui components dependencies from /vue-piwik-pro-example [`#52`](https://github.com/PiwikPRO/vue-piwik-pro/pull/52)
+- Bump glob and sucrase in /vue-piwik-pro-example [`#50`](https://github.com/PiwikPRO/vue-piwik-pro/pull/50)
+- Bump rollup from 4.9.5 to 4.62.2 in /vue-piwik-pro-example [`#51`](https://github.com/PiwikPRO/vue-piwik-pro/pull/51)
+- Bump postcss from 8.4.49 to 8.5.15 [`#43`](https://github.com/PiwikPRO/vue-piwik-pro/pull/43)
+- Bump lodash from 4.17.21 to 4.18.1 [`#47`](https://github.com/PiwikPRO/vue-piwik-pro/pull/47)
+- Bump markdown-it from 14.1.0 to 14.2.0 [`#42`](https://github.com/PiwikPRO/vue-piwik-pro/pull/42)
+- Bump cross-spawn from 7.0.3 to 7.0.6 in /vue-piwik-pro-example [`#48`](https://github.com/PiwikPRO/vue-piwik-pro/pull/48)
+- Bump braces from 3.0.2 to 3.0.3 in /vue-piwik-pro-example [`#24`](https://github.com/PiwikPRO/vue-piwik-pro/pull/24)
+- Bump happy-dom and @happy-dom/jest-environment [`#40`](https://github.com/PiwikPRO/vue-piwik-pro/pull/40)
+- Bump form-data from 4.0.0 to 4.0.6 [`#41`](https://github.com/PiwikPRO/vue-piwik-pro/pull/41)
+
+### Commits
+
+- Add/update SECURITY.md [`3db90e8`](https://github.com/PiwikPRO/vue-piwik-pro/commit/3db90e818f29da7416bd0655b02b7b85544979d9)
+
 ## [1.7.0](https://github.com/PiwikPRO/vue-piwik-pro/compare/1.6.0...1.7.0) - 2026-05-06
 
 ### Merged
