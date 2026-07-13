@@ -58,14 +58,17 @@ on `master`.
    npm version <patch|minor|major>
    ```
 
-3. Commit and push the branch:
+3. Commit and push the branch. Use a [Conventional Commits](https://www.conventionalcommits.org)
+   message (see `CONTRIBUTING.md`):
 
    ```sh
-   git commit -am "release x.y.z"
+   git commit -am "chore(release): x.y.z"
    git push -u origin release/x.y.z
    ```
 
-4. Open a **`release x.y.z`** pull request and squash-merge it into `master`.
+4. Open a pull request titled **`chore(release): x.y.z`** and squash-merge it
+   into `master`. Because merges are squashed, the **PR title** is what lands on
+   `master` (and what auto-changelog picks up next), so keep it Conventional too.
    This is what lands the changelog and version bump on `master`.
 
 5. On GitHub, create a **Release** with a **new tag** `x.y.z` targeting `master`.
