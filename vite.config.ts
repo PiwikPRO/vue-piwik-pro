@@ -11,6 +11,7 @@ export default defineConfig({
       declaration: true,
       declarationDir: 'dist',
       sourceMap: true,
+      exclude: ['**/*.test.ts', 'src/__tests__/**'],
     }),
   ],
   build: {
