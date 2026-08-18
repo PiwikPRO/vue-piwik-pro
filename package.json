@@ -68,6 +68,6 @@
     "plugin"
   ],
   "dependencies": {
-    "@piwikpro/tracking-base-library": "^1.7.1"
+    "@piwikpro/tracking-base-library": "^2.0.0"
   }
 }
