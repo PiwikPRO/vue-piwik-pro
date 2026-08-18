@@ -5,7 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.7.1](https://github.com/PiwikPRO/vue-piwik-pro/compare/1.7.0...1.7.1)
+## [2.0.0](https://github.com/PiwikPRO/vue-piwik-pro/compare/1.7.1...2.0.0)
+
+### Merged
+
+- chore: bump tracking-base-library [`#76`](https://github.com/PiwikPRO/vue-piwik-pro/pull/76)
+- chore(deps): bump postcss in /vue-piwik-pro-example [`#75`](https://github.com/PiwikPRO/vue-piwik-pro/pull/75)
+- chore(deps): bump nanoid from 3.3.15 to 3.3.18 in /vue-piwik-pro-example [`#74`](https://github.com/PiwikPRO/vue-piwik-pro/pull/74)
+- chore: bump vulnerable deps [`#73`](https://github.com/PiwikPRO/vue-piwik-pro/pull/73)
+- chore(deps-dev): bump brace-expansion from 1.1.11 to 1.1.18 [`#72`](https://github.com/PiwikPRO/vue-piwik-pro/pull/72)
+- chore(deps-dev): bump linkify-it from 5.0.1 to 5.0.2 [`#67`](https://github.com/PiwikPRO/vue-piwik-pro/pull/67)
+- ci: added pr title lint shared action [`#69`](https://github.com/PiwikPRO/vue-piwik-pro/pull/69)
+- ci: remove yarn from ci [`#70`](https://github.com/PiwikPRO/vue-piwik-pro/pull/70)
+- test: added unit and e2e tests [`#66`](https://github.com/PiwikPRO/vue-piwik-pro/pull/66)
+
+## [1.7.1](https://github.com/PiwikPRO/vue-piwik-pro/compare/1.7.0...1.7.1) - 2026-07-13
 
 ### Merged
 
